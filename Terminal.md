@@ -34,7 +34,7 @@
         dd → Cortar archivo.
         yy → Copiar archivo.
         pp → Pegar archivo.
-        ctrl + h → muestra archivos ocualtos.
+        ctrl + h | del → muestra archivos ocualtos.
         espacio → Seleccionar archivo actual.
         :rename → Renombrar archivo.
         :delete → Eliminar el archivo seleccionado.
