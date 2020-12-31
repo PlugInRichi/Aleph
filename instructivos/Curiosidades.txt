@@ -1,0 +1,18 @@
+
+
+
+sh ejecuta lso archivos sh , no sirve ./
+
+
+Para hacer comandos que puedan ser ejecutados desde la terminal podemos:
+
+#Contiene los comando propios de el usuario
+~/.bash_profile
+
+#Ahí se especifican alias como
+alias comandoPro ='\opt\miniconda3\bin\conda'
+
+#actualizar el bash
+source ~/.bash_profile
+
+#Corre!

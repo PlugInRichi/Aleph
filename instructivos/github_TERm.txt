@@ -1,0 +1,4 @@
+
+#Permite almacenar las variables de inicio de sessión en:
+#~/.git-credentials
+git config credential.helper store

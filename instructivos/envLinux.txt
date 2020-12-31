@@ -1,0 +1,52 @@
+
+#Ya se debe tener Python previmanete instalado bueno
+
+
+#Actualiza pip
+python3 -m pip install --upgrade pip
+
+
+#Intalar virtual env
+#Si no lleva el sudo no va a reconocerlo como comando
+sudo pip3 install virtualenv
+
+#What is PATH
+
+#In Linux, PATH is an environmental variable that tells the shell
+#and other programs which directories to search for executable files.
+#It consists of a list of colon-separated absolute paths to directories containing the executables
+which virtualenv
+
+#Actualiza el bash profile
+. ~/.bash_profile
+
+#crear con la version de python instalada
+virtualenv minIA
+
+#Para haverl con la verisón específica:
+virtualenv -p python3.6 minIA
+
+
+#Para gestionar diferentes versiones de python:
+sudo pacman -S pyenv
+pyenv install 3.6.0
+#Actualiza la versión instalada
+pyenv rehash
+pyenv virtualenv 3.6.0 minIA
+yay -S pyenv-virtualenv
+pyenv activate
+
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+should be in .bashrc, not .bash_profile
+
+
+~/proyectos/cmi$ pyenv local cmi
+#Activar
+source minIA/bin/activate
+
+deactivate
+
+python -V

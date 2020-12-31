@@ -1,0 +1,19 @@
+#DESCARGAR ARCHIVOS DESDE LA TERMINAL
+
+wget www.pág
+
+
+#INTALACIÓN DE NGROK
+Intalar Ngrok
+
+wget 
+Desinstalar
+
+ejecutar ngrok auth...
+
+
+#MODIFICACIÓN JUPYTER PARA PERMITIR ACCESO REMOTO
+jupyter notebook --generate-config
+
+acceder al archivo creado y modificar:
+c.NotebookApp.allow_remote_access = True

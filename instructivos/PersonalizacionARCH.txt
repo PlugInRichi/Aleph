@@ -1,0 +1,68 @@
+
+
+Instalar Qtile
+
+#Toma el archivo por default y lo lleva a la ruta para poder hacer la customización
+cp /usr/share/doc/qtile/default_config.py /home/rick/.config/qtile/config.py
+
+#Hay que instalar code previamente con pacman
+code /home/rick/.config/qtile/config.py
+
+#Poner bonito el rofi
+	sudo pacman -S which
+rofi-theme-selector
+
+#Para tener fuentes bien perronas
+sudo pacman -S ttf-dejavu ttf-liberation noto-fonts
+
+#Para poder tener un background (añadir a xprofile)
+feh --bg-scale Imágenes/Wallpapers/lucas-benjamin-wQLAGv4_OYs-unsplash.jpg
+#Tambien podemos usar nitrogen
+
+#Para descomprimir
+sudo pacman -S unzip
+
+#Poner bien la hora
+timedatectl set-timezone UTC
+
+#Instalar pip
+pacman -S python-pip
+
+#Instalar XORG
+#Se utiliza para poder manejar procesos básicos entre ventanas.
+Es una infraestructura de escritorio basada en un sistema X11 de código abierto.
+Xorg ofrece una interfaz entre su hardware y el software gráfico que quiere correr. 
+
+sudo pacman -S xorg
+
+#Para hacer todos los cambios permanentes debemos hacer:
+sudo pacman -S xorg-xinit
+
+#Editamos el archivo, aqui se escriven todos los comandos que se ejecutan antes de cargar el gestor de ventanas
+sudo nano ~/.xprofile 
+
+#Buscar un archivo en todo el sistema por su nombre
+find / -name config.py
+
+#Para poner la terminal super cool:
+https://www.maketecheasier.com/8-useful-and-interesting-bash-prompts
+
+#Para el audio:
+pacman -Sy alsa-lib alsa-utils
+pacman -S alsa-oss
+
+
+#Para el brillo
+sudo pacman -S brightnessctl
+
+
+#Para activar dispositivos USB
+sudo pacman -S udiskie ntfs-3g
+
+
+#Intalar para gestinonar carpetas
+sudo pacman -S range
+
+#Cambiar el tamaño del historial bash
+export HISTSIZE=10000
+export HISEFILESIZE=10000
