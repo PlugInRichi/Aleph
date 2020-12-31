@@ -31,8 +31,9 @@
         i → Mostrar el archivo.
         r → Abrir archivo con el programa elegido.
         / → Buscar archivos (n | p saltar a la coincidencia siguiente / anterior).
-        d → Copiar/cortar archivo 
-        p → Pegar archivo.
+        dd → Cortar archivo.
+        yy → Copiar archivo.
+        pp → Pegar archivo.
         espacio → Seleccionar archivo actual.
         :rename → Renombrar archivo.
         :delete → Eliminar el archivo seleccionado.
