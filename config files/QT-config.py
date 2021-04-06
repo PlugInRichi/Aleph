@@ -48,7 +48,8 @@ keys = [
         desc="Move window up in current stack "),
 
     # Switch window focus to other pane(s) of stack
-    Key([mod], "space", lazy.layout.next(),
+    #Key([mod], "space", lazy.layout.next(),
+    Key([mod], "Tab", lazy.layout.next(),
         desc="Switch window focus to other pane(s) of stack"),
 
     # Swap panes of split stack
@@ -64,7 +65,7 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
 
     # Toggle between different layouts as defined below
-    Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+    Key([mod], "q", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
 
     #Para el rofi
@@ -72,7 +73,7 @@ keys = [
     Key([mod, 'shift'], "u", lazy.spawn("rofi -show")),
 
     #Para el Ranger
-    Key([mod], "f", lazy.spawn(terminal+" -e ranger")),
+    Key([mod], "f", lazy.spawn(terminal+" -e env EDITOR=nano ranger")),
 
     #Para el navegador
     Key([mod], "b", lazy.spawn("firefox")),
