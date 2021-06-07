@@ -16,3 +16,11 @@ alias comandoPro ='\opt\miniconda3\bin\conda'
 source ~/.bash_profile
 
 #Corre!
+
+=================   BONITO ===============
+figlet #Sirve para poner texto BONITO
+neofetch
+cmatriz #Pone las letras que caen
+
+
+head

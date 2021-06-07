@@ -26,23 +26,6 @@ virtualenv minIA
 #Para haverl con la verisón específica:
 virtualenv -p python3.6 minIA
 
-
-#Para gestionar diferentes versiones de python:
-sudo pacman -S pyenv
-pyenv install 3.6.0
-#Actualiza la versión instalada
-pyenv rehash
-pyenv virtualenv 3.6.0 minIA
-yay -S pyenv-virtualenv
-pyenv activate
-
-
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-should be in .bashrc, not .bash_profile
-
-
 ~/proyectos/cmi$ pyenv local cmi
 #Activar
 source minIA/bin/activate
@@ -50,3 +33,27 @@ source minIA/bin/activate
 deactivate
 
 python -V
+
+
+
+==================   ADMINISTRACIÓN DE AMBIENTES PYTHON   =====================
+
+sudo pacman -S pyenv
+yay -S pyenv-virtualenv
+
+#Para gestionar diferentes versiones de python:
+pyenv install 3.6.0
+
+#Actualiza la versión instalada
+pyenv rehash
+
+#Crear un ambiente virtual con la versión instalada
+pyenv virtualenv 3.6.0 minIA
+
+#Activar el ambiente
+pyenv activate
+
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+should be in .bashrc, not .bash_profile

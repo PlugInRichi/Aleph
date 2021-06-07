@@ -1,0 +1,12 @@
+======================== Multiples Contenedores ================================
+Sive para separar funcionalidades
+
+docker network create nateworkName
+#Creación de la red:
+  -Sirve para que los contenedores puedan verse los unos a los otros e interactuar
+  entre sí.
+
+docker run -d \
+--network netName --network-alias mysql \ #Ubicar facilmete la IP del contenedor
+                                          dentro de la red que se acaba de crear
+                                          así 

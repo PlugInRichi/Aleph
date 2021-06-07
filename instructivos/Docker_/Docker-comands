@@ -1,0 +1,61 @@
+docker info
+
+docker ps
+#Muestra la información de los docker que están en ejecución.
+
+docker ps -a
+#Muestra incluso los muertos
+
+docker pull alpine:TAG
+#Descarga el contenedor alpine, pero no la corre
+#El nombre seguido de dos puntos especifica la versión (sin busca la última)
+
+docker images
+#Muestra todas las imágenes en el SO
+
+docker start CONTEINER_ID
+#Ejecuta el contenedor en Background
+
+docker logs (CONTEINER_ID | NAME)
+#Ver los logs de un contenedor.
+-f para esperar en el log
+
+
+docker exec
+#Ejecuta un comando dentro d eun contenedor que ya esta corriendo
+
+
+docker run alpine:3.7 ls -l
+#Ejecuta el comando ls dentro del contenedor llamado
+
+-it #interactive terminal
+-i #Sesión interactiva
+-t #Emula la terminal
+
+docker run -it alpine:3.7 sh
+#Ejecuta una terminal dentro del contenedor
+
+
+docker stop (CONTEINER_ID | NAME) [CONTEINER_ID | NAME ... ]
+#Mata al contenedor
+
+docker run -d imagen
+#Ejecuta el contenedor en Background
+
+============ EJECUCIÓN CONTENEDORES =======================
+
+docker run imagen
+#Ejecuta un contenedor, si no esta descargada busca al imagenen
+
+docker run imagen:tag
+#TAG indica cual es la versión
+
+docker run -p 3000:3000 imagen
+#Lo del puerto 3000 del docker, exponlo por mi puerto 3000 del servidor
+
+***********
+Por cada comando run ejecutado se lanza una nueva instancia de un contenedor,
+puede ser la misma imagen pero no ocmparten las modificaciónes.
+
+#Ejecuta un comando dentro de un contenedor en ejecución
+docker exec -it 64153ed57734 sh

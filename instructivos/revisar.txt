@@ -1,0 +1,14 @@
+PyTorch does not distribute the CPU only versions over PyPI. They are only available through their custom registry.
+
+If you select the CPU only version on PyTorch - Get Started Locally you get the following instructions:
+
+pip install torch==1.5.0+cpu torchvision==0.6.0+cpu -f https://download.pytorch.org/whl/torch_stable.html
+
+Since you're not manually executing the pip install, you cannot simply add the -f https://download.pytorch.org/whl/torch_stable.html.
+
+As an alternative, you can put it into your requirements.txt as a standalone line. It shouldn't really matter where exactly you put it, but it is commonly put at the very top.
+
+-f https://download.pytorch.org/whl/torch_stable.html
+
+¿Qué hac eel comando -f al ejecutarlo con pip?
+

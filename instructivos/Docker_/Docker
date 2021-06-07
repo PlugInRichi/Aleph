@@ -1,0 +1,42 @@
+FROM nom_imagen:tag_a_usar {Sin tag utiliza la última}
+{Pueden ir más líneas de código que ayuden a ubicar nuestro código en la ruta
+correccta para l aimagen cargada}
+COPY /src /root
+EXPOSE 80 {Pueeto 80 del contenedor sea accesible desde la máquina host}
+
+
+============ Creación de IMÁGENES ===========
+
+DOCKER FILE
+
+nano Dockerfile (Así se llaman todos)
+
+Necesitamos usar una imagen padre (La que tenga la mayoría de las dependencias)
+Buscar en docker hub
+FROM imagen:TAG
+
+WORKDIR
+Crea el directorio y todos los comandos se ejecutan dentro de este directorio.
+
+COPY . .
+Copia todos los archivos del directrio . donde se sencuentra el dockerfile
+a el . del contenedor
+
+RUN
+Ejecuta un comendo para compilar los archivos necesarios
+
+CMD ["comando", "argumentos"]
+Especifica el comando que va a correr cuanso se inice el contenedor
+
+ENTRYPOINT
+Deja abierto un comando si se le desea pasar argumentos.
+
+============== CONSTRUIR LA IMAGEN ===========
+
+docker build -t NombreImagen .
+El punto indica que el build_context es el directorio actual
+
+
+
+======================= MULTI-CONTAINER =============================
+Ejecutar varios contenedores que puedan interactuar entre sí
