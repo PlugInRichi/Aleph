@@ -4,4 +4,38 @@
 git config credential.helper store
 
 
-#CREAR UN REPOSITORIO DESDE CERO
+#Creación de un repositorio a partir de un directorio ya existente.
+
+===== | ====== | ======= | ====== | ======= | ====== | ======= | ====== | =====
+Abrimos la carpeta del proyecto que queremos gestionar
+--------------------------------------------------------------------------------
+cd Proyecto
+
+===== | ====== | ======= | ====== | ======= | ====== | ======= | ====== | =====
+Creamos el repositorio indicandole a git que queremos versionar el directorio
+actual.
+--------------------------------------------------------------------------------
+git init
+
+
+===== | ====== | ======= | ====== | ======= | ====== | ======= | ====== | =====
+Git crea un directorio oculto especial donde almacena toda la información relacionada
+al proyecto bajo el nombre .git Para conoce el estado de nuestro Proyecto
+podemos ejecutar:
+--------------------------------------------------------------------------------
+git status
+
+
+
+===== | ====== | ======= | ====== | ======= | ====== | ======= | ====== | =====
+Antes de comenzar a gestionar archivos es necesario conocer algunos conceptos
+básicos.
+
+ÍNDICE:
+El índice es un archivo binario generalmente almacenado en .git/index que
+enumera todos los archivos de la rama actual, es decir, representa lo que se
+está rastreando.
+
+
+
+Este comando añade al índice cualquier fichero nuevo o que haya sido modificado:
