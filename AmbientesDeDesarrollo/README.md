@@ -14,10 +14,10 @@ Instalación (ArchLinux)
 
     sudo pacman -S pyenv
     yay -S pyenv-virtualenv
-  Adicionalmente tendrás que agregar en tu archivo .bashrc
+Adicionalmente tendrás que agregar en tu archivo .bashrc
  
-     eval "$(pyenv init -)"
-     eval "$(pyenv virtualenv-init -)"
+    echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
+    echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 
 
 Gestionar diferentes versiones de python requiere instalarlas en el sistema operativo:
