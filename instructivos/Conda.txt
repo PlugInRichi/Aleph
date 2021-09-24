@@ -1,6 +1,0 @@
-pip install pyyaml --trusted-host files.pythonhosted.org --trusted-host pypi.org
-
-
-conda config --set auto_activate_base false
-
-#Para quitar el (base al iniciar conda)

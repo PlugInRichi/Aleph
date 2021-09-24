@@ -1,8 +1,0 @@
-
-
-tmux new -s prueba
-tmux detach
-
-tmux list-sessions
-
-tmux attach -t prueba
