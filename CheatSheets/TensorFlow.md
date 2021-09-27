@@ -6,4 +6,4 @@ Versión instalada de Tensor Flow
 
 Número de GPUs disponibles
    
-    tf.config.list_physical_devices('GPU'))
+    tf.config.list_physical_devices('GPU')
